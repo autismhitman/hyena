@@ -1,0 +1,15 @@
+{
+  
+  "firstName": "dr",
+  "lastName": "dre",
+  "email": "dr@dre.com",
+  "password": "dre",
+  "street": "455 main street",
+  "city": "detroit",
+  "state": "Ohio",
+  "zip": "30001", 
+  "passengersCount": "4",
+  "expectedPrice": "$2338 USD"
+ 
+   
+}

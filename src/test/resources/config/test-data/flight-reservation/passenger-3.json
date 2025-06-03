@@ -1,0 +1,15 @@
+{
+  
+  "firstName": "cheb",
+  "lastName": "khaled",
+  "email": "khaled@rai.com",
+  "password": "didi",
+  "street": "101 non main street",
+  "city": "detroit",
+  "state": "Ohio",
+  "zip": "30001", 
+  "passengersCount": "3",
+  "expectedPrice": "$1753 USD"
+ 
+   
+}
