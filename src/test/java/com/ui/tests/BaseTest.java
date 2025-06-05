@@ -1,5 +1,7 @@
 package com.ui.tests;
 
+import java.net.MalformedURLException;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -12,8 +14,17 @@ public class BaseTest {
 	 
 	@BeforeMethod
 	public void setup() {
+		 
 		
-		Driver.initDriver(Browser.CHROME);
+		 
+			String browser = System.getProperty("browserName").toUpperCase(); 
+			try {
+				Driver.initDriver( Browser.valueOf(browser));
+			} catch (MalformedURLException e) {
+				 
+				e.printStackTrace();
+			}
+		  
 	}
 	
 	

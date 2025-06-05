@@ -26,7 +26,7 @@ public class JsonUtils {
 		 
 		 try {
 			 
-			 reader = new FileReader(new File("./src/test/resources/config/test-data/flight-reservation/passenger-1.json"));
+			 reader = new FileReader(new File("config/test-data/flight-reservation/passenger-1.json"));
 		 }catch(FileNotFoundException e) {
 			 e.printStackTrace();
 		 }

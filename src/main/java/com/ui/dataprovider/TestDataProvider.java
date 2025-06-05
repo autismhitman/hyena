@@ -15,7 +15,7 @@ import com.ui.utils.JsonUtils;
 public class TestDataProvider {
 	
 	
-	@DataProvider(parallel = true)
+	@DataProvider(parallel = false)
 	public Iterator<Object[]> getData() {
          List<Address> list =JsonUtils.getLoginData();
          

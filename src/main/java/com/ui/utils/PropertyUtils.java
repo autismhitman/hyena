@@ -14,7 +14,7 @@ public class PropertyUtils {
 	public static String getPropertyValues(String value) {
 		
 		try {
-			reader = new FileReader(new File("./src/test/resources/config/config.properties"));
+			reader = new FileReader(new File("config/config.properties"));
 			property.load(reader);
 		} catch (IOException e) {
 			
