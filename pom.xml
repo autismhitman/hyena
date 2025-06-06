@@ -88,7 +88,7 @@
             <selenium.grid.enabled>false</selenium.grid.enabled>
           </systemPropertyVariables>
           <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
+            <suiteXmlFile>src\test\resources\test-suites\testng.xml</suiteXmlFile>
           </suiteXmlFiles>
            <parallel>methods</parallel>
            <threadCount>2</threadCount>
@@ -103,7 +103,7 @@
         <executions>
           <execution>
             <id>copy-dependencies</id>
-            <phase>package</phase>
+            <phase>prepare-package</phase>
             <goals>
               <goal>copy-dependencies</goal>
             </goals>
@@ -143,7 +143,7 @@
           <execution>
             <id>copy-resources</id>
             <!-- here the phase you need -->
-            <phase>package</phase>
+            <phase>prepare-package</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
@@ -152,13 +152,7 @@
               <resources>          
                 <resource>
                   <directory>src/test/resources</directory>
-                </resource>
-                <resource>
-      			  <directory>.</directory>
-       			 <includes>
-         		  <include>testng.xml</include>
-       			 </includes>
-              </resource>
+                </resource>               
               </resources>              
             </configuration>            
           </execution>

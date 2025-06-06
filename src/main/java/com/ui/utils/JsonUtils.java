@@ -1,8 +1,8 @@
 package com.ui.utils;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -21,17 +21,19 @@ public class JsonUtils {
 	 public static List<Address> getLoginData() {
 		 
 		 Gson gson = new Gson();
+		
+		
 		 
-		 FileReader reader = null;
-		 
-		 try {
-			 
-			 reader = new FileReader(new File("config/test-data/flight-reservation/passenger-1.json"));
-		 }catch(FileNotFoundException e) {
+		 try ( InputStreamReader reader  = 
+				 new InputStreamReader(ResourceLoader.getResource("config/test-data/flight-reservation/passenger-1.json"));){
+			 Data address=  gson.fromJson(reader, Data.class);
+			return address.getData();
+ 
+		 }catch(IOException e) {
 			 e.printStackTrace();
 		 }
-		    Data address=  gson.fromJson(reader, Data.class);
-			return address.getData();
+		return null;
+		    
 		 
 	 }
   

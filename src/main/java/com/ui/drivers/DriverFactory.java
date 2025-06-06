@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import org.openqa.selenium.WebDriver;
 
 import com.ui.constants.Browser;
+import com.ui.constants.Constants;
 
 public class DriverFactory {
 
@@ -13,7 +14,7 @@ public class DriverFactory {
 
 		WebDriver driver = null;
 
-		if (Boolean.parseBoolean(System.getProperty("selenium.grid.enabled"))) {
+		if (Boolean.parseBoolean(System.getProperty(Constants.GRID_ENABLED))) {
 
 			driver=RemoteDriver.getRemoteBrowser(browserName);
 

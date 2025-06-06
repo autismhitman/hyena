@@ -6,6 +6,7 @@ import java.util.Objects;
 import org.openqa.selenium.WebDriver;
 
 import com.ui.constants.Browser;
+import com.ui.constants.Constants;
 import com.ui.utils.PropertyUtils;
 
 public class Driver {	
@@ -16,7 +17,7 @@ public class Driver {
 			   
 		       WebDriver driver = DriverFactory.getBrowser(browserName);
 		       DriverManager.setDriver(driver);
-		       DriverManager.getDriver().get(PropertyUtils.getPropertyValues("url"));
+		       DriverManager.getDriver().get(PropertyUtils.getPropertyValues(Constants.FLIGHT_RESERVATION_URL));
 		   	   DriverManager.getDriver().manage().window().maximize();
 		 }
 		 
