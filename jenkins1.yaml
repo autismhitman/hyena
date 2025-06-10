@@ -1,9 +1,52 @@
-services:
-  jenkins:
-    image: jenkins/jenkins:lts
-    user: root
-    ports:
-      - 8080:8080
-      - 50000:50000
-    volumes:
-      - ./volumes/master:/var/jenkins_home
+pipeline{
+    
+     agent any
+     
+     stages{
+         
+        stage('Build jar'){
+            
+          
+         
+          steps {
+              bat "mvn clean package -DskipTests"
+             
+          }
+         
+        }
+        
+        stage('Build Image'){
+         
+          steps {
+             
+           
+             bat "docker build -t=neopane2/selenium ."
+          }
+         
+        }
+        
+        stage('Push Image'){
+          
+          environment {
+              DOCKER_HUB =credentials('dockerhub-creds')
+          }
+          
+          steps {
+             
+             bat  "docker login -u ${DOCKER_HUB_USR} -p ${DOCKER_HUB_PSW}
+             
+             bat "docker push neopane2/selenium"
+          }
+         
+        }
+     }
+     
+     post{
+         always{
+             
+             bat "docker logout"
+         }
+     }
+     
+     
+}
