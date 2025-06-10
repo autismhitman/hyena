@@ -33,7 +33,7 @@ pipeline{
           
           steps {
              
-             bat  "docker login -u ${DOCKER_HUB_USR} -p ${DOCKER_HUB_PSW}
+             bat  "docker login -u ${DOCKER_HUB_USR} -p ${DOCKER_HUB_PSW}"
              bat "docker push neopane2/selenium:latest"
              bat "docker tag neopane2/selenium:latest neopane2/selenium:${env.BUILD_NUMBER}"
              bat "docker push neopane2/selenium:${env.BUILD_NUMBER}"
