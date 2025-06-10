@@ -1,0 +1,58 @@
+pipeline{
+    
+    agent any
+    stages{
+        
+        stage('stage-1'){
+            
+            steps {
+                
+                echo "Doing mvn clean package"
+                
+            }
+            
+            
+        }
+        stage('stage-2'){
+            
+            steps {
+                
+                echo "Doing build dokcer image"
+                
+            }
+            
+            
+        }
+        
+        stage('stage-3'){
+            
+            steps {
+                
+                echo "push docker image"
+                
+            }
+            
+            
+        }
+        
+    }
+        post{
+            
+            always{
+                
+                echo "doing clean up"
+            }
+            
+            
+            
+        }
+            
+            
+        
+        
+        
+    
+    
+    
+    
+}

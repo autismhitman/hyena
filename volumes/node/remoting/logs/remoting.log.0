@@ -1,0 +1,10 @@
+Jun 09, 2025 7:00:25 PM hudson.remoting.Launcher createEngine
+INFO: Setting up agent: NODE1
+Jun 09, 2025 7:00:25 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 3301.v4363ddcca_4e7
+Jun 09, 2025 7:00:25 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using E:\Navin\2025\EclipseUpdated\vinothJava8\Container\volumes\node\remoting as a remoting work directory
+Jun 09, 2025 7:00:27 PM hudson.remoting.Launcher$CuiListener status
+INFO: WebSocket connection open
+Jun 09, 2025 7:00:27 PM hudson.remoting.Launcher$CuiListener status
+INFO: Connected

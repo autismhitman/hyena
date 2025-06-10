@@ -1,0 +1,11 @@
+Started by user [8mha:////4HgFeTtgdrc4hByw4/1Y/UatbEXfb3Q0KxvKB/EPcY1zAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9vMSyzDwA/YphiMAAAAA=[0mnavin
+Running as SYSTEM
+Building remotely on [8mha:////4I35OSlzcU+OUsBuxi+ZfkGVNUtq3j/+ehgaPaO+uK1HAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYB/eT83ILSktQifT9/F1dDfQCjW1X2xQAAAA==[0mNODE1 in workspace E:\Navin\2025\EclipseUpdated\vinothJava8\Container\volumes\node\workspace\Navin
+[Navin] $ cmd /c call C:\Users\NAVINS~1\AppData\Local\Temp\jenkins9621763512729316787.bat
+
+E:\Navin\2025\EclipseUpdated\vinothJava8\Container\volumes\node\workspace\Navin>docker ps 
+CONTAINER ID   IMAGE                 COMMAND                  CREATED          STATUS          PORTS                                              NAMES
+822f85940daa   jenkins/jenkins:lts   "/usr/bin/tini -- /u…"   43 minutes ago   Up 36 minutes   0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   container-jenkins-1
+
+E:\Navin\2025\EclipseUpdated\vinothJava8\Container\volumes\node\workspace\Navin>exit 0 
+Finished: SUCCESS
